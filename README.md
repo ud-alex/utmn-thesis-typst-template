@@ -5,6 +5,8 @@
 Требования к оформлению заимствованы из методических рекомендаций, доступных по ссылке:  
 [https://sveden.utmn.ru/sveden/files/IMiKN_Metodicheskie_rekomendacii_VKR.pdf](https://sveden.utmn.ru/sveden/files/IMiKN_Metodicheskie_rekomendacii_VKR.pdf)
 
+Пример можно посмотреть во вкладке «релизы».
+
 ## Планы по доработке
 
 - [ ] Сделать демонстрационный PDF-файл более наглядным  
