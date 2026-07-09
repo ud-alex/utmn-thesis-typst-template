@@ -1,0 +1,15 @@
+site_name: My Docs
+
+nav:
+  - why_typst.md
+  - requirements.md
+  - how_to.md
+  - specifications.md
+  - todo.md
+
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+ 
+theme:
+  name: readthedocs
