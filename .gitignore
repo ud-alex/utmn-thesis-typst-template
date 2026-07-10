@@ -1,3 +1,4 @@
 *.pdf
 gost-r*
 *.drawio*
+/site/*
