@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: "ВКР ТюмГУ: шаблон Typst"
 
 nav:
   - why_typst.md
@@ -9,7 +9,7 @@ nav:
 
 markdown_extensions:
   - pymdownx.tasklist:
-      custom_checkbox: true
+      #custom_checkbox: true
  
 theme:
   name: readthedocs
