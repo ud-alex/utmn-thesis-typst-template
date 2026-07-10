@@ -1,6 +1,6 @@
 
 #show <title_page>: set par(
-  leading: 0.85em,
+  leading: 0.75em,
   first-line-indent: 
     (amount: 0cm),
   justify: false
@@ -18,7 +18,8 @@
   numbering: none, 
   margin: (bottom: 40mm),
   footer: align(center)[
-    #project_data.city \ #project_data.year год
+    
+    #par(leading: 1em)[#project_data.city \ #project_data.year год]
     ])[
       
 #show heading: set text(hyphenate: false)
@@ -32,9 +33,8 @@
   высшего образования
 
   #upper(project_data.university)  \
-  #hide()[werew] \
-  #upper(project_data.institute)
-
+  #hide([empty line]) \
+  #upper(project_data.institute) \
   #project_data.department
 ]
 
@@ -64,7 +64,7 @@
 
   #upper(project_data.title)
 
-  #v(1em)
+  #v(0.5em)
 
   #project_data.major_code #project_data.major \
   Профиль «#project_data.submajor»
@@ -75,15 +75,22 @@
 
 
   #table(
-    columns: (1fr,0.4fr,1fr),
+    columns: (1fr,0.4fr,1fr), 
+    inset: (y:5pt),
     stroke: 0pt, align: left+horizon)[
       #gendered_done работу \
       #gendered_student #project_data.academic_year курса \
       #project_data.education_mode формы обучения][][#project_data.author][
-      ][][][][][
+      ][][
       ][Научный руководитель \
       #project_data.advisor_credentials][][
-        #project_data.advisor]
+        #project_data.advisor][
+        ][][][
+          #project_data.thirdline_role\
+          #project_data.thirdline_credentials
+        ][][
+          #project_data.thirdline_name
+        ]
 
 ]]
 ] <title_page>
