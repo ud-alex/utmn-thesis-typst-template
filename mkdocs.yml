@@ -3,7 +3,7 @@ site_name: My Docs
 nav:
   - why_typst.md
   - requirements.md
-  - how_to.md
+  - how-to.md
   - specifications.md
   - todo.md
 
