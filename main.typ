@@ -1,6 +1,6 @@
 
 #import "/assets/template.typ": project
-#show: project.with(yaml("/assets/project_data.yaml"))
+#show: project.with(yaml("/project_data.yml"))
 
 
 #include "chapters/title_page.typ"

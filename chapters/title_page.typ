@@ -6,7 +6,7 @@
   justify: false
 )
 
-#let project_data = yaml("/assets/project_data.yaml")
+#let project_data = yaml("/project_data.yml")
 
 #let gendered_done = if project_data.gender == "male" {"Выполнил"} else if project_data.gender == "female" {"Выполнила"}
 #let gendered_student = if project_data.gender == "male" {"студент"} else if project_data.gender == "female" {"студентка"}

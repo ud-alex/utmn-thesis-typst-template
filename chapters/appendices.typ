@@ -1,4 +1,4 @@
-#import "/appendix.typ": appendix
+#import "/assets/appendix.typ": appendix
 
 #pagebreak()
 #appendix()[Миллионы скучных таблиц]
