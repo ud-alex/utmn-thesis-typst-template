@@ -10,7 +10,7 @@
 #pagebreak()
 
 
-#include "demo.typ"
+// #include "assets/demo.typ"
 
 #include "chapters/intro.typ"
 
