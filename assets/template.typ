@@ -19,7 +19,7 @@
                     numbering: "1", fill: rgb("FCFCFA"), paper: "a4")
 
   set text(font: "Times New Roman", size: 14pt, lang: "ru")
-  set par(leading: 1.5em, first-line-indent: (all: true, amount: 1.25cm), justify: true)
+  set par(leading: 1.2em, first-line-indent: (all: true, amount: 1.25cm), justify: true)
 
   show heading: set block(below: 1.5em, above: 2em)
   show heading: set text(size: 14pt)

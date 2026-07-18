@@ -12,6 +12,13 @@
 
 // #include "assets/demo.typ"
 
+// Проверка корректности разреженности текста (интерлиньяжа)
+// Пока не найду лучшее решение — чисто экспериментально
+#[
+  #pagebreak()
+  #set par.line(numbering: "1", numbering-scope: "page")
+  #lorem(350)]
+
 #include "chapters/intro.typ"
 
 #include "chapters/first_chapter.typ"
