@@ -48,9 +48,19 @@
 
   show table: set par(leading: 0.65em)
 
-  show enum: set block(inset: (left:1.25cm))
+  // show enum: set block(inset: (left:1.25cm))
 
-  show list: set block(inset: (left:1.25cm))
+  set enum(indent: 1.25cm)
+  show enum: it => {
+    set enum(indent: 0pt)
+    it
+  }
+
+  set list(indent: 1.25cm)
+  show list: it => {
+    set list(indent: 0pt)
+    it
+  }
 
   show raw.where(block:true): set text(
     size: 10pt,
