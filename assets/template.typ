@@ -48,6 +48,28 @@
 
   show table: set par(leading: 0.65em)
 
+  // show enum: set block(inset: (left:1.25cm))
+
+  set enum(indent: 1.25cm)
+  show enum: it => {
+    set enum(indent: 0pt)
+    it
+  }
+
+  set list(indent: 1.25cm)
+  show list: it => {
+    set list(indent: 0pt)
+    it
+  }
+
+  show raw.where(block:true): set text(
+    size: 10pt,
+    top-edge: "bounds",
+    bottom-edge: "bounds",
+  )
+
+  show raw.where(block: true): set block(below:0.75cm)
+
 
   
   // Параметры параграфв
@@ -124,7 +146,7 @@
   show figure.where(
     kind: table,
   ): it => {
-    align(right)[#it.caption.supplement #it.numbering]
+    align(right)[#it.supplement #it.caption.counter.display()]
     v(-0.5em)
     align(center)[#it.caption.body]
     it.body
