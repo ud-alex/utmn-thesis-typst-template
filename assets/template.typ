@@ -62,6 +62,17 @@
     it
   }
 
+  set footnote.entry(
+    separator: block(width: 30%)[
+      #line(length: 100%, stroke: 0.5pt)
+      #v(12pt)
+    ]
+)
+
+  show footnote.entry: set par(leading: 1.25em)
+
+  show footnote.entry: it => {it; v(0.75em)}
+
   show raw.where(block:true): set text(
     size: 10pt,
     top-edge: "bounds",
