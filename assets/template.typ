@@ -136,7 +136,7 @@
   show figure.where(
     kind: table,
   ): it => {
-    align(right)[#it.caption.supplement #it.numbering]
+    align(right)[#it.supplement #it.caption.counter.display()]
     v(-0.5em)
     align(center)[#it.caption.body]
     it.body
