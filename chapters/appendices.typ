@@ -79,3 +79,20 @@
 
 #figure(caption: "Какой-то график какой-то функции")[
 #image("/graphics/sine_function.png")]
+
+
+#figure(
+caption: [Тот же самый график, но уже в двух колонках],
+grid(
+columns: 2,
+image("/graphics/sine_function.png", width: 100%),
+image("/graphics/sine_function.png", width: 100%),
+)
+)
+
+#align(horizon)[
+#rotate(-90deg)[
+#figure(
+caption: [Знакомый график в альбомной ориентации],
+image("/graphics/sine_function.png", height: 50%)
+)]]
