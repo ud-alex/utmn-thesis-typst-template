@@ -48,6 +48,16 @@
 
   show table: set par(leading: 0.65em)
 
+  show enum: set block(inset: (left:1.25cm))
+
+  show list: set block(inset: (left:1.25cm))
+
+  show raw.where(block:true): set text(
+    size: 10pt,
+    top-edge: "bounds",
+    bottom-edge: "bounds",
+  )
+
 
   
   // Параметры параграфв
