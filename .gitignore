@@ -2,3 +2,4 @@
 gost-r*
 *.drawio*
 /site/*
+*.csl
