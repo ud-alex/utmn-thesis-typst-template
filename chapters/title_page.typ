@@ -1,6 +1,6 @@
 
-#show <title_page>: set par(
-  leading: 0.75em,
+#set par(
+  leading: 1.5em,
   first-line-indent: 
     (amount: 0cm),
   justify: false
@@ -17,10 +17,8 @@
 #page(
   numbering: none, 
   margin: (bottom: 40mm),
-  footer: align(center)[
-    
-    #par(leading: 1em)[#project_data.city \ #project_data.year год]
-    ])[
+  footer: align(center)[#project_data.city \ #project_data.year год]
+    )[
       
 #show heading: set text(hyphenate: false)
 
@@ -69,26 +67,30 @@
   #project_data.major_code #project_data.major \
   Профиль «#project_data.submajor»
 
-  #v(1em)
+  #v(1.5em)
 
   // #show <title_page_table>:
 
+  #show table: set text(font: "Times New Roman", size: 14pt, lang: "ru", 
+  top-edge: "baseline", bottom-edge: "bounds")
+
+  #show table: set par(leading: 1.5em)
+
 
   #table(
-    columns: (1fr,0.4fr,1fr), 
-    inset: (y:5pt),
+    columns: (1fr,1fr), 
+    inset: (bottom:1.75em),
+    column-gutter: 2cm,
     stroke: 0pt, align: left+horizon)[
       #gendered_done работу \
       #gendered_student #project_data.academic_year курса \
-      #project_data.education_mode формы обучения][][#project_data.author][
-      ][][
-      ][Научный руководитель \
-      #project_data.advisor_credentials][][
+      #project_data.education_mode формы обучения][#project_data.author][
+      Научный руководитель \
+      #project_data.advisor_credentials][
         #project_data.advisor][
-        ][][][
           #project_data.thirdline_role\
           #project_data.thirdline_credentials
-        ][][
+        ][
           #project_data.thirdline_name
         ]
 
