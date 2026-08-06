@@ -22,8 +22,10 @@
 
 #include "chapters/bibliography.typ"
 
-
 #include "chapters/appendices.typ"
+
+#include "chapters/number_of_lines_test.typ"
+
 
 
 
