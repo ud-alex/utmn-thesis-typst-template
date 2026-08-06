@@ -17,7 +17,7 @@
 #page(
   numbering: none, 
   margin: (bottom: 40mm),
-  footer: align(center)[#project_data.city \ #project_data.year год]
+  footer: align(center+horizon)[#project_data.city \ #project_data.year год]
     )[
       
 #show heading: set text(hyphenate: false)
