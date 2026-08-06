@@ -91,6 +91,7 @@
       amount: 1.25cm,
     ),
     justify: true,
+    spacing: 1.5em
   )
   
   // Параметры заголовков
