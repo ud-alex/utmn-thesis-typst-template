@@ -58,6 +58,8 @@
     bottom-edge: "bounds",
   )
 
+  show raw.where(block: true): set block(below:0.75cm)
+
 
   
   // Параметры параграфв
