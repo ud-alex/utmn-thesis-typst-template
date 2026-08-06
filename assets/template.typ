@@ -34,7 +34,21 @@
     font: "Times New Roman",
     size: 14pt,
     lang: "ru",
+    top-edge: "baseline",
+    bottom-edge: "bounds",
   )
+
+  show table: set text(
+    font: "Times New Roman",
+    size: 14pt,
+    lang: "ru",
+    top-edge: "bounds",
+    bottom-edge: "bounds",
+  )
+
+  show table: set par(leading: 0.65em)
+
+
   
   // Параметры параграфв
   set par(
