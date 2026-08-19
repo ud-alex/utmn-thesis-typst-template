@@ -21,8 +21,8 @@
 
 #page(
   numbering: none,
-  margin: (bottom: 40mm),
-  footer: align(center + horizon)[#project_data.city \ #project_data.year год],
+  margin: (bottom: 30mm),
+  footer: align(center + top)[#project_data.city \ #project_data.year год],
 )[
   
   #show heading: set text(hyphenate: false)
@@ -36,7 +36,8 @@
     высшего образования
     
     #upper(project_data.university)  \
-    #hide([empty line]) \
+    // #hide([empty line]) \
+    #v(1em)
     #upper(project_data.institute) \
     #project_data.department
   ]
