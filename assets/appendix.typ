@@ -8,12 +8,11 @@
     if numbering != "default"{
       appendix_counter.update(numbering)}
 
-    let app_numbering = if numbering == "default"  {context appendix_counter.display()} else {numbering}
-
     align(top + right)[
       #box(height: 1cm)[ #context {
           heading(numbering: none)[
-            ПРИЛОЖЕНИЕ #app_numbering]
+            ПРИЛОЖЕНИЕ #if numbering == "default" {appendix_counter.display()} else {numbering}
+]
         }
       ]
     ]
