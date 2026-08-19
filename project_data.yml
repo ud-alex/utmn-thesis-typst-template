@@ -73,5 +73,5 @@ eq_numbering_by_default: false
 #       так и числом
 #    theorem_numbering_style: 2
 
-theorem_numbering_style: 2
+theorem_numbering_style: "continuous"
 
