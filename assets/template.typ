@@ -30,7 +30,6 @@
       bottom: 20mm,
     ),
     numbering: "1",
-    fill: rgb("FCFCFA"),
     paper: "a4",
   )
   
