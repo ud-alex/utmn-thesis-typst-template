@@ -7,10 +7,6 @@
 
 #outline(title: "Содержание", indent: 1.5em)
 
-//#pagebreak()
-
-
-// #include "assets/demo.typ"
 
 #include "chapters/intro.typ"
 
