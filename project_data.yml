@@ -59,7 +59,7 @@ eq_numbering_by_default: false
 # Параметр поддерживает два вида значений
 # 1) theorem_numbering_style: "continuous" 
 #    нумерует теоремы сквозным образом (Т. 1, Т. 2,…, Т. n)
-# theorem_numbering_style: "k"
+# theorem_numbering_style: "k"  
 #    если k — это натуральное число, то в нумерации теоремы 1.1.
 #    первые k чисел будут совпадать с нумерацией
 #    первых k уровней (под-)глав
@@ -67,6 +67,11 @@ eq_numbering_by_default: false
 #    Нумерация имеет вид 1.1.1, 1.1.2 … 1.1.n; 2.3.1, 2.3.2 … 2.3.n
 #    Пример:  theorem_numbering_style: "1", тогда
 #    Нумерация имеет вид 1.1, 1.2 … 1.n; 2.1, 2.2 … 2.n
+#    
+#    Число k представлено как строкой
+#    theorem_numbering_style: "2"
+#       так и числом
+#    theorem_numbering_style: 2
 
-theorem_numbering_style: "continuous"
+theorem_numbering_style: 2
 
