@@ -25,4 +25,4 @@
 // Нужен только для демонстрационных целей, перед финально компиляцией —
 // — обязательно удалить или закомментировать
 
-#include "chapters/number_of_lines_test.typ"
+// #include "chapters/number_of_lines_test.typ"
