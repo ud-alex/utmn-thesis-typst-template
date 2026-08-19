@@ -1,12 +1,17 @@
 #import "@preview/zebraw:0.4.0": zebraw
 #import "@preview/non-unlabeled:0.2.0": dont-number-unlabeled
-#import "@preview/theorion:0.6.0": set-theorion-numbering, show-theorion
+#import "@preview/theorion:0.6.0": set-theorion-numbering, show-theorion, set-inherited-levels
 
 // В project_data main.typ передает данные из yaml-файла
 #let project(project_data, body) = {
   show: zebraw // Для красивого отображения листингов кода
   show: show-theorion // Для корректного отображения теорем/лемм/доказательств
-  set-theorion-numbering("1.1.1")
+
+  let theorem_numbering_style = if project_data.theorem_numbering_style == "continuous" {("1",0)} else {("1.", int(project_data.theorem_numbering_style))}
+
+  set-theorion-numbering(theorem_numbering_style.at(0))
+  set-inherited-levels(theorem_numbering_style.at(1))
+
   
   // Параметры документа.
   // Используются только в метаданных pdf-файла
@@ -142,12 +147,12 @@
     },
     // Настройка применяется только при выполнении условия в строке ниже. 
     // Иначе — дефолтный режим со сквозной нумерацией
-  ) if project_data.numbering_style == "nested"
+  ) if project_data.eq_numbering_style == "nested"
   
   // Отключает нумерацию для формул без тегов,
   // Если того требуют настройки в project_data.yml
   let numbering_style = {
-    if project_data.numbering_by_default { it => it } else { dont-number-unlabeled(math.equation) }
+    if project_data.eq_numbering_by_default { it => it } else { dont-number-unlabeled(math.equation) }
   }
   
   show math.equation: numbering_style
