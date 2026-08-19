@@ -1,6 +1,8 @@
 #import "/assets/appendix.typ": appendix
 
-#appendix()[Миллионы скучных таблиц]
+#appendix[Миллионы скучных таблиц] <app1>
+
+
 
 #figure(
   caption: "Описание таблицы",
@@ -75,7 +77,7 @@
 
 #pagebreak()
 
-#appendix()[Куча интересных Графиков]
+#appendix()[Куча интересных Графиков] <app2>
 
 #figure(caption: "Какой-то график какой-то функции")[
 #image("/graphics/sine_function.png")]
