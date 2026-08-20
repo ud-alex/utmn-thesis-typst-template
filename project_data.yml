@@ -75,3 +75,4 @@ eq_numbering_by_default: false
 
 theorem_numbering_style: "continuous"
 
+emulate_libre_office: true

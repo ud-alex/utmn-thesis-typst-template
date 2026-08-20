@@ -20,18 +20,52 @@
     author: project_data.author,
     date: auto,
   )
+
+  //mc = magic_constant
+  // Волшебная она в том смысле, что подобрана
+  // на глаз, чтобы как можно лучше соответствовать
+  // оформлению в LibreOffice
+  // 
+  // Typst по умолчанию трактует отступ в 2см
+  // как расстояние от края до основного текста, 
+  // а офисные пакеты — как до текста в колонтитуле (номера страницы) 
+  // 
+  // Этот дополнительный отступ с некоторым форматированием футера должны обеспечить визуальную сходство
+
+  let mc = 1.39cm 
+  
+  let numbering_footer = [
+    
+    #block(
+      height: 20mm + mc,
+      width: 100%,
+    )[
+      #align(center + top, block(height: mc, [
+        #align(bottom)[
+          #context counter(page).display()]]))
+    ]
+  ]
   
   // Параметры страницы
   set page(
     margin: (
       left: 30mm,
       right: 15mm,
-      top: 20mm,
-      bottom: 20mm,
+      top: 20mm,      
     ),
-    numbering: "1",
     paper: "a4",
-  )
+  ) 
+
+  set page(
+    margin: (bottom: 20mm+mc),
+    footer-descent: 0pt,
+    footer: numbering_footer,
+  ) if project_data.emulate_libre_office
+
+  set page(
+    margin: (bottom: 20mm),
+    numbering: "1"
+  ) if not project_data.emulate_libre_office
   
   // Параметры текста  
   set text(
@@ -85,17 +119,17 @@
 
   show raw.where(block: true): set block(below:0.75cm)
 
-
+  let interlineage = if project_data.emulate_libre_office {1.53em} else {1.5em}
   
   // Параметры параграфв
   set par(
-    leading: 1.5em,
+    leading: interlineage,
     first-line-indent: (
       all: true,
       amount: 1.25cm,
     ),
     justify: true,
-    spacing: 1.5em
+    spacing: interlineage
   )
   
   // Параметры заголовков
