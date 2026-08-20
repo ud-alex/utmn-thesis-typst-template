@@ -8,6 +8,7 @@
     if numbering != "default"{
       appendix_counter.update(numbering)}
 
+
     align(top + right)[
       #box(height: 1cm)[ #context {
           heading(numbering: none)[
@@ -16,6 +17,9 @@
         }
       ]
     ]
+
+    v(-0.75em)
+
     
     context heading(outlined: false, numbering: none)[
       
